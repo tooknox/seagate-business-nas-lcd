@@ -1,4 +1,4 @@
-# Seagate Business Storage Windows Server 4-bay NAS front panel for Linux
+# Seagate Business Storage Windows Server 4-bay NAS (SRN04W) front panel for Linux
 
 Linux support for the front LCD, backlight and buttons on the
 [Seagate Business Storage Windows Server 4-bay NAS](https://www.seagate.com/in/en/support/external-hard-drives/network-storage/business-storage-windows-server-4-bay-nas/).
