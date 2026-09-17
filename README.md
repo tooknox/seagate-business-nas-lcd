@@ -9,6 +9,11 @@ This was written for the MSS0731-family hardware used in the 4-bay Windows Serve
 It replaces the original Windows XBig front-panel service with a small FreePascal
 hardware process and keeps the menu/UI in a normal Bash script so it is easy to edit.
 
+NAS Details
+- Datasheet: [win-server-4-bay-nas-data-sheet-ds1798-3-1311us.pdf](https://www.seagate.com/content/dam/seagate/migrated-assets/www-content/product-content/seagate-business-fam/business-storage-windows-server-4-bay-nas/en-us/amer/docs/win-server-4-bay-nas-data-sheet-ds1798-3-1311us.pdf)
+- CPU:  Intel(R) Atom(TM) CPU D2701
+- RAM: 4G DDR3 (can be upgraded to 8G)
+- Hardware model: SRN04W
 ## What's in this repo
 
 - `seagate-xbig-frontpanel.pas` — hardware layer. Owns the GPIO lines, drives the
