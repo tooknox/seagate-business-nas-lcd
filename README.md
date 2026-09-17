@@ -49,11 +49,12 @@ Runtime:
 - Bash for the included menu
 - permission to access the matching `/dev/gpiochip*` devices (normally root)
 
-Note: If using the menu in this repo make sure you have following modules loaded for temps, fan rpm and gpio access
-coretemp (cpu temp)
-f71882fg (fan rpm)
-drivetemp (drive temp)
-gpio-f7188x (gpio control)
+Note: If using the menu in this repo make sure you have following modules loaded for temps, fan rpm and gpio access etc
+
+- coretemp (cpu temp)
+- f71882fg (fan rpm)
+- drivetemp (drive temp)
+- gpio-f7188x (gpio control)
 you can add them to /etc/modules-load.d/modules.conf to load them at startup.
 
 To build from source you also need FreePascal.
