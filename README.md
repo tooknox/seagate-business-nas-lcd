@@ -91,7 +91,8 @@ sudo ./seagate-xbig-menu.sh
 ```
 
 The menu starts the Pascal hardware process automatically and checks that the
-protocol version matches before continuing.
+protocol version matches before continuing. **You can use Cron or service manager
+of your choice to run the menu scrip at startup.**
 
 To test the hardware process by itself:
 
