@@ -3,6 +3,8 @@
 Linux support for the front LCD, backlight and buttons on the
 [Seagate Business Storage Windows Server 4-bay NAS](https://www.seagate.com/in/en/support/external-hard-drives/network-storage/business-storage-windows-server-4-bay-nas/).
 
+<img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/4f095d0f-ccac-4e56-b342-b785c44fa2a5" />
+
 This was written for the MSS0731-family hardware used in the 4-bay Windows Server NAS.
 It replaces the original Windows XBig front-panel service with a small FreePascal
 hardware process and keeps the menu/UI in a normal Bash script so it is easy to edit.
@@ -111,6 +113,49 @@ MODE ACTIVE
 ```
 
 See `PROTOCOL.md` for the complete interface.
+
+### Front-panel menu
+
+The menu is designed for the NAS's two front buttons. The `>` cursor stays fixed on the first column while the menu items move underneath it.
+
+```text
+┌─────────────────┐
+│ linux-nas      #│   ← Home screen
+│ 192.168.1.10    │
+└─────────────────┘
+
+        ↓ press any button
+          (once to wake up and again to enter menu)
+
+┌─────────────────┐
+│> Network       %│   ← Menu
+│  Storage        │
+└─────────────────┘
+
+        ↓ short press UP/DOWN
+
+┌─────────────────┐
+│> Temperatures  %│   ← Scroll menu
+│  Fan            │
+└─────────────────┘
+
+        ↓ hold UP (~0.95 s)
+
+┌─────────────────┐
+│ Temperatures   *│   ← Detail screen
+│ CPU       52 C  │
+└─────────────────┘
+```
+
+**Controls**
+
+- **First press:** wakes the display and increases brightness; it does **not** enter the menu.
+- **Short UP/DOWN:** move through the menu items.
+- **Hold UP (~0.95 s):** enter/select.
+- **Hold DOWN (~0.95 s):** back.
+- **30 seconds without activity:** returns to the home screen and dims the display.
+
+The symbols in the last column identify the screen type: `#` home, `%` menu, `*` detail.
 
 ## Customizing the menu
 
