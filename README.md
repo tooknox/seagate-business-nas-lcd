@@ -49,7 +49,7 @@ Runtime:
 - Bash for the included menu
 - permission to access the matching `/dev/gpiochip*` devices (normally root)
 
-Note: If using the menu in this repo make sure you have following modules loaded for temps, fan rpm and gpio access etc
+Note: If you decide to use the menu (seagate-xbig-menu.sh) in this repo make sure you have the following modules loaded for temps, fan rpm, gpio access etc
 
 - coretemp (cpu temp)
 - f71882fg (fan rpm)
