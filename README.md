@@ -168,5 +168,5 @@ Most users should only need to edit `seagate-xbig-menu.sh`. The Pascal program i
 intended to stay as the board-specific hardware layer while the menu remains a
 normal, readable shell script.
 
-The protocol and menu are versioned separately so the UI can evolve without
-changing the hardware interface.
+The protocol and the menu are are independent so the UI can be changed without
+changing the hardware interface. You can even write it in python if you so desire.
