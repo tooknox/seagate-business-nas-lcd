@@ -150,6 +150,20 @@ The menu is designed for the NAS's two front buttons. The `>` cursor stays fixed
 │ Temperatures   *│   ← Detail screen
 │ CPU       52 C  │
 └─────────────────┘
+
+There is also the option to poweroff/reboot right from the panel
+
+┌─────────────────┐
+│ > Reboot       %│   ← Menu
+│   Poweroff      │
+└─────────────────┘
+
+        ↓ hold UP (~0.95 s) to Reboot or Poweroff
+
+┌─────────────────┐
+│Rebooting...     │
+│                 │
+└─────────────────┘
 ```
 
 **Controls**
