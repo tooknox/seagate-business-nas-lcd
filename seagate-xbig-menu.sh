@@ -39,7 +39,7 @@
 #   ./seagate-xbig-menu.sh
 #
 
-MENU_VERSION=0.9
+MENU_VERSION=1.0
 PROTOCOL_VERSION=1.0
 
 # ---------------------------------------------------------------------------
