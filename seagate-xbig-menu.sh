@@ -86,7 +86,7 @@ ALERT_HELPER=${ALERT_HELPER:-/usr/local/libexec/seagate-xbig-alerts}
 # UI state
 # ---------------------------------------------------------------------------
 
-MENU_ITEMS=(Network Storage Temperatures Fan Uptime Alerts About)
+MENU_ITEMS=(Network Storage Temperatures Fan Uptime Alerts About Reboot Poweroff)
 MENU_INDEX=0
 DETAIL_INDEX=0
 DETAIL_LINE1=()
@@ -1141,8 +1141,27 @@ handle_long_press() {
     # Physical top/UP button = enter / confirm.
     # Physical bottom/DOWN button = back.
     # There is no level below a detail page, so long UP there is a no-op.
+    #
+    # The Poweroff/Reboot entries are the only menu items whose long-UP action
+    # performs a system command instead of opening a detail page.
     if (( button == 1 )); then
-        [[ $UI_STATE == menu ]] && enter_detail
+        if [[ $UI_STATE == menu ]]; then
+            case ${MENU_ITEMS[MENU_INDEX]} in
+                Poweroff)
+                    render_lines "Shutting down..." ""
+                    sleep 0.2
+                    poweroff
+                    ;;
+                Reboot)
+                    render_lines "Rebooting..." ""
+                    sleep 0.2
+                    reboot
+                    ;;
+                *)
+                    enter_detail
+                    ;;
+            esac
+        fi
         return 0
     fi
 
