@@ -1150,12 +1150,12 @@ handle_long_press() {
                 Poweroff)
                     render_lines "Shutting down..." ""
                     sleep 0.2
-                    poweroff
+                    /usr/sbin/poweroff
                     ;;
                 Reboot)
                     render_lines "Rebooting..." ""
                     sleep 0.2
-                    reboot
+                    /usr/sbin/reboot
                     ;;
                 *)
                     enter_detail
